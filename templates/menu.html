@@ -1,0 +1,29 @@
+{% extands "base.html" %}
+
+
+{% block title %}
+мега пега
+{% endblock title %}
+
+{% block center %}
+<thread>
+    <tr>
+        <td>номер</td>
+        <td>назва пицци</td>
+        <td>ингридиенти</td>
+        <td>цина</td>
+    </tr>
+</thread>
+    <tbody>
+        [% for student in students|sort(atribute="rost"),revers=True %]
+        <tr>
+            <td>{{pizza.index}}</td>
+            <td>{{pizza.name}}</td>
+            <td>{{pizza.ingredients}}</td>
+            <td>{{pizza.price}}</td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+<table>
+{% endblock center %}
